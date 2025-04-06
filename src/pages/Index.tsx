@@ -13,7 +13,9 @@ const Index = () => {
   
   const handleCreateNote = () => {
     const newNote = createNote();
-    navigate(`/note/${newNote.id}`);
+    if (newNote) {
+      navigate(`/note/${newNote.id}`);
+    }
   };
   
   const handleNoteClick = (noteId: string) => {

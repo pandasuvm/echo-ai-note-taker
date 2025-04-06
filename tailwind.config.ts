@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -117,8 +116,43 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out',
 				'fade-out': 'fade-out 0.3s ease-out',
 				'pulse-slow': 'pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: 'none',
+						color: 'inherit',
+						a: {
+							color: 'inherit',
+							textDecoration: 'none',
+							fontWeight: 'normal',
+						},
+						strong: {
+							fontWeight: '600',
+						},
+						h1: {
+							fontWeight: '600',
+						},
+						h2: {
+							fontWeight: '600',
+						},
+						h3: {
+							fontWeight: '600',
+						},
+						code: {
+							color: 'inherit',
+						},
+						pre: {
+							color: 'inherit',
+							backgroundColor: 'transparent',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+	],
 } satisfies Config;
